@@ -1,7 +1,28 @@
 package ru.snatkin.task5;
 
-public class Pond extends Water {
+import java.time.LocalDate;
+
+public class Person {
     private String name;
+    private LocalDate BirthDay;
+    private int PassNumber;
+
+    public LocalDate getBirthDay() {
+        return BirthDay;
+    }
+
+    public void setBirthDay(LocalDate birthDay) {
+        BirthDay = birthDay;
+    }
+
+    public int getPassNumber() {
+        return PassNumber;
+    }
+
+    public void setPassNumber(int passNumber) {
+        PassNumber = passNumber;
+    }
+
 
     public String getName() {
         return name;
@@ -13,8 +34,10 @@ public class Pond extends Water {
 
     @Override
     public String toString() {
-        return "Pond{" +
+        return "Person{" +
                 "name='" + name + '\'' +
+                ", BirthDay=" + BirthDay +
+                ", PassNumber=" + PassNumber +
                 '}';
     }
 }
