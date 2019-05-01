@@ -1,51 +1,25 @@
 package ru.snatkin.task6;
 
 public class VendMachine {
-    private int Number;
-    private String Title;
-    public double Price;
+                    //это поле называется оно drinks. тип массив из элементов типа Drink.
+    private Drink[] drinks = new Drink[6];
+
+    public VendMachine(Drink[] drinks) {
+        this.drinks = drinks;}
 
 
-    public VendMachine (int Number, String Title, double Price) {
-        this.Price = Price;
-        this.Title = Title;
-        this.Number = Number;
-    }
 
-    public VendMachine(Drink milkCoconut) {
 
-    }
+    public VendMachine(){// 13 и 14 Это конструктор по умолчанию, он создает пустой экземпляр класса.
+    }                    // Пустой - значит у экземпляра drinks поля не будут заполнены.
+                         // У конструктора по умолчанию нет элементов, т.е. в скобках пусто
 
-    public int getNumber() {
-        return Number;
-    }
+    public Drink[] getDrinks() {
+        return drinks;}
 
-    public void setNumber(int number) {
-        Number = number;
-    }
-
-    public String getTitle() {
-        return Title;
-    }
-
-    public void setTitle(String title) {
-        Title = title;
-    }
-
-    public double getPrice() {
-        return Price;
-    }
-
-    public void setPrice(int price) {
-        Price = price;
-    }
-
-    @Override
-    public String toString() {
-        return "VendMachine{" +
-                "Number=" + Number +
-                ", Title='" + Title + '\'' +
-                ", Price=" + Price +
-                '}';
+    public void setDrinks(Drink[] drinks) {
+        this.drinks = drinks;
     }
 }
+
+

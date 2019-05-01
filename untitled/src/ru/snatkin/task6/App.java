@@ -2,68 +2,47 @@ package ru.snatkin.task6;
 
 import java.util.Scanner;
 
-public class App extends Drink{
-    public App(int number, String title, double price) {
-
-    }
-
+public class App{
+    
     public static void main(String[] args) {
-        VendMachine menu[] = new VendMachine[9];
-        menu[0] = new VendMachine(Drink.VODKA);
-        menu[1] = new VendMachine(Drink.MILK_COCONUT);
-        menu[2] = new VendMachine(Drink.BrichJuice);
-        menu[3] = new VendMachine(Drink.GreenTea);
-        menu[4] = new VendMachine(Drink.BlackTea);
-        menu[5] = new VendMachine(Drink.SMOOTHIE);
+        Drink[] Liquid = new Drink[6];
+        Liquid[0] = Drink.BlackTea;
+        Liquid[1] = Drink.GreenTea;
+        Liquid[2] = Drink.VODKA;
+        Liquid[3] = Drink.SMOOTHIE;
+        Liquid[4] = Drink.MILK_COCONUT;
+        Liquid[5] = Drink.BrichJuice;
+
+        // экземпляр класса VendMachine - переменная автомат automat,
+        // для создания этой перем вызвали конструктор класса VendMachine с аргументами (т.е. это не конструктор по умолчанию)
+        VendMachine automat = new VendMachine(Liquid);
+
+
+
+        Drink[] items = automat.getDrinks();
 
         System.out.println("Выберите напиток");
-        for (int i = 0; i <= 3; i++) {
-            System.out.println(menu[i] + "   Нажмите кнопку   " + (i+1));
+        for (int i = 0; i < automat.getDrinks().length; i++){
+            System.out.println(Liquid[i] + "   Нажмите кнопку   " + (items[i].Number));
         }
 
         Scanner scan = new Scanner(System.in);
         int button = scan.nextInt();
 
-        System.out.println("Внесите оплату");
 
-        int pay = scan.nextInt();
-        int sum = pay;
-        if (button == 1) {
-            while (sum < menu[0].Price) {
-                pay = scan.nextInt();
-                sum = sum + pay;
-            }
-            System.out.println("Ваш напиток готов");
-            if (sum > menu[0].Price)
-                System.out.println("Сдача составляет   " + (sum - menu[0].Price));
-        }
+        if (button < 1 || button > items.length){
+            System.out.println("Вы ввели некоректное число, введите корректное");}
 
-        if (button == 2) {
-            while (sum < menu[1].Price) {
-                pay = scan.nextInt();
-                sum = sum + pay;
-            }
-            System.out.println("Ваш напиток готов");
-            if (sum > menu[1].Price)
-                System.out.println("Сдача составляет   " + (sum - menu[1].Price));
-        }
-        if (button == 3) {
-            while (sum < menu[2].Price) {
-                pay = scan.nextInt();
-                sum = sum + pay;
-            }
-            System.out.println("Ваш напиток готов");
-            if (sum > menu[2].Price)
-                System.out.println("Сдача составляет   " + (sum - menu[2].Price));
-        }
-        if (button == 4) {
-            while (sum < menu[3].Price) {
-                pay = scan.nextInt();
-                sum = sum + pay;
-            }
-            System.out.println("Ваш напиток готов");
-            if (sum > menu[3].Price)
-                System.out.println("Сдача составляет   " + (sum - menu[3].Price));
-        }
+       else {
+            System.out.println("Внесите оплату");
+            int pay = scan.nextInt();
+           if (pay < items[button-1].getPrice()){
+               System.out.println("Не достаточно средств");}
+           else {
+               System.out.println("Получите напиток " + items[button-1].Title);
+           }
+       }
     }
 }
+
+
