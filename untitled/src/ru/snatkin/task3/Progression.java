@@ -1,28 +1,24 @@
 package ru.snatkin.task3;
 
+import java.util.Scanner;
+
 public class Progression{
+     public static void main(String[] args) {
 
-    private int a0;
-    private int d;
+         System.out.println("Введите число членов");
+         Scanner sc = new Scanner(System.in);
 
-    Progression(int a0, int d) {
-        this.a0 = a0;
-        this.d = d;
-    }
-
-
-    public int getNumber(int j) {
-        int tmp = a0;
-        for (int i = 1; i <= j; i++) {
-            tmp += i * d;
-        }
-        return tmp;
-    }
-
-
-    public int getSum(int n) {
-        return (n + 1) * (a0 + getNumber(n)) / 2;
-    }
+         int N = sc.nextInt();
+         int[] numbers = new int[N];
+         for (int i = 0; i < N; i++) {
+             numbers[i] = i+1;
+         }
+         int ans = 0;
+         for (int i = 0; i < numbers.length; i++) {
+             ans += numbers[i];
+             System.out.println(ans);
+         }
+     }
 }
 
 
