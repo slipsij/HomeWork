@@ -1,43 +1,39 @@
 package ru.snatkin.task5;
 
-import java.time.LocalDate;
+public enum Person {
+    Anton("Антон",18,"Тенор","Мужчина"),
+    Katya("Катя",40,"Сопрано","Женщина"),
+    Fedya("Антон",32,"Тенор","Мужчина"),
+    Olga("Ольга",8,"Альт","Женщина"),
+    Ivan("Антон",32,"Тенор","Мужчина"),
+    Sasha("Антон",20,"Контр тенор","Мужчина"),
+    Nadya("Надя",19,"Сопрано","Женщина");
 
-public class Person {
+    Person(String name, int age, String timbre, String sex) {
+        this.name = name;
+        Age = age;
+        Timbre = timbre;
+        Sex = sex;
+    }
+
     private String name;
-    private LocalDate BirthDay;
-    private int PassNumber;
+    private int Age;
+    private String Timbre;
+    private String Sex;
 
-    public LocalDate getBirthDay() {
-        return BirthDay;
+    public int getAge() {
+        return Age;
     }
 
-    public void setBirthDay(LocalDate birthDay) {
-        BirthDay = birthDay;
+    public String getTimbre() {
+        return Timbre;
     }
 
-    public int getPassNumber() {
-        return PassNumber;
+   public String getSex() {
+        return Sex;
     }
-
-    public void setPassNumber(int passNumber) {
-        PassNumber = passNumber;
-    }
-
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-          }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", BirthDay=" + BirthDay +
-                ", PassNumber=" + PassNumber +
-                '}';
     }
 }

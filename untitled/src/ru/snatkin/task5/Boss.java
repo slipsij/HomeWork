@@ -1,20 +1,19 @@
 package ru.snatkin.task5;
 
-public class Boss extends Person {
-    private int salary;
+public class Boss {
 
-    @Override
-    public String toString() {
-        return "Boss{" +
-                "salary=" + salary +
-                '}';
+    Person[] artist = new Person[8];
+    public Boss(Person[] artist) {
+        this.artist = artist;
+    } public Boss(){
     }
 
-    public int getSalary() {
-        return salary;
+    public Person[] getArtist() {
+        return artist;
     }
 
-    public void setSalary(int salary) {
-        this.salary = salary;
+    public void setArtist(Person[] artist) {
+        this.artist = artist;
     }
 }
+
