@@ -11,7 +11,7 @@ public enum Drink2 {
 
     private int Price;
     private String Title;
-    private int Number;
+
 
     public int getPrice() {
         return Price;
