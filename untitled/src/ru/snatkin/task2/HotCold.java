@@ -9,7 +9,6 @@ public class HotCold {
 
         int UnknownsNub, UserNum;
 
-
         Scanner sc = new Scanner(System.in);
         System.out.println("Угадай число от 1 до 100");
         System.out.println("Для завершения программы введите число 888");
@@ -26,7 +25,9 @@ public class HotCold {
 
             UserNum = sc.nextInt();
 
-            if (UserNum == 888) break;
+            if (UserNum == 888) {
+                break;
+            }
 
             if (UnknownsNub == UserNum){
                 System.out.println("Угадано!");
@@ -39,5 +40,5 @@ public class HotCold {
 
         } while (UnknownsNub != UserNum);
         sc.close();
-        }
     }
+}

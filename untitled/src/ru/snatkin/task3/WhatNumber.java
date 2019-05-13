@@ -11,13 +11,14 @@ public class WhatNumber {
 
         if (a > 0){
             System.out.println("Положительное ");
-            if (a%2 == 0) {
+            if (a % 2 == 0) {
                 System.out.println("Чётное");
-            } else { System.out.println("Нечётное");
+            } else {
+                System.out.println("Нечётное");
             }
         } else {
             System.out.println("Отрицательное ");
-            if (a%2 == 0) {
+            if (a % 2 == 0) {
                 System.out.println("Чётное");
             } else {
                 System.out.println("Нечётное");
