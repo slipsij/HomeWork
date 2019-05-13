@@ -6,7 +6,6 @@ public class SalaryTax {
 
     public static void main(String[] args) {
 
-
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Введите сумму зароботной платы до вычета НДС");
