@@ -1,13 +1,18 @@
 package ru.snatkin.task5;
 
-public class Singer {
-   public boolean Power = false;
+public class Singer extends Person{
+   private String timbre;
 
-    public boolean isPower() {
-        return Power;
+    public String getTimbre() {
+        return timbre;
     }
 
-    public void setPower(boolean power) {
-        Power = power;
+    public void setTimbre(String timbre) {
+        this.timbre = timbre;
+    }
+
+    public Singer(String name, int age, String sex, String timbre) {
+        super(name, age, sex);
+        this.timbre = timbre;
     }
 }

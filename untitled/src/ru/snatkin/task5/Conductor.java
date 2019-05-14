@@ -1,11 +1,8 @@
-/*package ru.snatkin.task5;
+package ru.snatkin.task5;
 
-public class Conductor extends Person{
+public class Conductor extends Person {
 
-
-
-    private int Salary;
-    public boolean Power = true;
+    private boolean Power;
 
     public boolean isPower() {
         return Power;
@@ -15,12 +12,8 @@ public class Conductor extends Person{
         Power = power;
     }
 
-    public int getSalary() {
-        return Salary;
-    }
-
-    public void setSalary(int salary) {
-        Salary = salary;
+    public Conductor(String name, int age, String sex, boolean power) {
+        super(name, age, sex);
+        Power = power;
     }
 }
-*/
