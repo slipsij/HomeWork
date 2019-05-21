@@ -1,19 +1,32 @@
-/*package ru.snatkin.task5;
+package ru.snatkin.task5;
 
+public class Choir { // один босс и массив певцов
+    private Conductor conductor;
+    private Singer[] singers;
 
+    public Choir(Conductor conductor, Singer[] singers) {
+        this.conductor = conductor;
+        this.singers = singers;
+    }
+    //вызовом кондактора и заставляем петь хор
 
-public class Choir { // один босс и массив воркеров
-    public static void main(String[] args) {
-        Person[] Choirister = new Person[8];
-        Choirister[0]= Fedya;
-        Choirister[2]= Ivan;
-        Choirister[3]= Anton;
-        Choirister[4]= Katya ;
-        Choirister[5]= Nadya;
-        Choirister[6]= Olga;
-        Choirister[7]= Sasha;
+    public Conductor getConductor() {
+        return conductor;
     }
 
+    public void setConductor(Conductor conductor) {
+        this.conductor = conductor;
+    }
+
+    public Singer[] getSingers() {
+        return singers;
+    }
+
+    public void setSingers(Singer[] singers) {
+        this.singers = singers;
+    }
+}
 
 
-}*/
+
+

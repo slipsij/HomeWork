@@ -1,11 +1,10 @@
-/*package ru.snatkin.task5;
+package ru.snatkin.task5;
 
-public class Conductor extends Person{
+import java.util.Scanner;
 
+public class Conductor extends Person {
 
-
-    private int Salary;
-    public boolean Power = true;
+    private boolean Power;
 
     public boolean isPower() {
         return Power;
@@ -15,12 +14,33 @@ public class Conductor extends Person{
         Power = power;
     }
 
-    public int getSalary() {
-        return Salary;
+    public Conductor(String name, int age, String sex, boolean power) {
+        super(name, age, sex);
+        Power = power;
     }
 
-    public void setSalary(int salary) {
-        Salary = salary;
+    public void poi(Choir choir, String name) {
+        System.out.println("Хор поет песню " + name);
+    }
+
+    public void hello() {
+        System.out.println("Привет! Меня зовут " + this.getName() + ", а это мой хор");
+        System.out.println("Мы можем спеть любую песню, которую ты выберешь!");
+        System.out.println("Напиши Полюшко-поле, что бы мы спели Полюшко-поле");
+    }
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        String sc = input.nextLine();
+
+        if ("poi".equals(sc)){
+            System.out.println("Вы ввели некорректное число");
+        } else {
+            System.out.println("не пой");
+        }
     }
 }
-*/
+
+//метод спеть песню который принимает на вод название песни (стринг) и будет выдавать на экран мы поем "" песню,
+//название будет браться из названия аргументов
