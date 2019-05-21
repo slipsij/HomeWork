@@ -19,6 +19,15 @@ public class Conductor extends Person {
         Power = power;
     }
 
+    public void poi(Choir choir, String name) {
+        System.out.println("Хор поет песню " + name);
+    }
+
+    public void hello() {
+        System.out.println("Привет! Меня зовут " + this.getName() + ", а это мой хор");
+        System.out.println("Мы можем спеть любую песню, которую ты выберешь!");
+        System.out.println("Напиши Полюшко-поле, что бы мы спели Полюшко-поле");
+    }
 
     public static void main(String[] args) {
 
