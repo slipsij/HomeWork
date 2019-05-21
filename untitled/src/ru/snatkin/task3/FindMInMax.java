@@ -3,8 +3,8 @@ package ru.snatkin.task3;
 import java.util.Scanner;
 
 public class FindMInMax {
-    static int minNumberPrint(int a, int b) {
 
+    private static int minNumberPrint(int a, int b) {
         if (a > b) {
             return b;
         } else {

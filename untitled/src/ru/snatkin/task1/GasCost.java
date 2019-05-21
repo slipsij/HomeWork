@@ -6,7 +6,6 @@ public class GasCost {
 
     public static void main(String[] args) {
 
-
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Введите количество литров и цену за 1л");
@@ -17,5 +16,5 @@ public class GasCost {
         sc.close();
 
         System.out.println("Результат " + var1*var2);
-}
+    }
 }

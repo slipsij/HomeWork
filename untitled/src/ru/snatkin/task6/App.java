@@ -27,7 +27,6 @@ public class App{
         Scanner scan = new Scanner(System.in);
         int button = scan.nextInt();
 
-
         if (button < 0 || button > items.length){
             System.out.println("Вы ввели некоректное число, введите корректное");
         } else {

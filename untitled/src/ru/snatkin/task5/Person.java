@@ -1,16 +1,19 @@
 package ru.snatkin.task5;
 
 public class Person {
-    Person(String name, int age, String sex) {
-        this.name = name;
-        Age = age;
-        Sex = sex;
-    } Person() {
-    }
 
     private String name;
     private int Age;
     private String Sex;
+
+    public Person(String name, int age, String sex) {
+        this.name = name;
+        this.Age = age;
+        this.Sex = sex;
+    }
+
+    Person() {
+    }
 
     public int getAge() {
         return Age;
@@ -24,4 +27,3 @@ public class Person {
         return name;
     }
 }
-

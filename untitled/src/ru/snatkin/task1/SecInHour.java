@@ -13,9 +13,8 @@ public class SecInHour {
         sc.close();
 
         int min = 60;
-
         int hour = 60;
 
-        System.out.println("В 3600 секундах "+(sec/min/hour)+" час");
+        System.out.println("В 3600 секундах " + (sec/min/hour) + " час");
     }
 }
