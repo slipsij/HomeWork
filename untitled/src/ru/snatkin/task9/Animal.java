@@ -1,4 +1,6 @@
 package ru.snatkin.task9;
 
-public class Animal {
+public abstract class Animal {
+   public abstract void getName();
+
 }
