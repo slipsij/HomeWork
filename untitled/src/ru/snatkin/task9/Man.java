@@ -1,4 +1,5 @@
 package ru.snatkin.task9;
 
-public class Man {
+public abstract class Man implements Swimable, Runable{
+
 }

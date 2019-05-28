@@ -24,7 +24,7 @@ public class Conductor extends Person {
     }
 
     public void hello() {
-        System.out.println("Привет! Меня зовут " + this.getName() + ", а это мой хор");
+        System.out.println("Привет! Меня зовут " + super.getName() + ", а это мой хор");
         System.out.println("Мы можем спеть любую песню, которую ты выберешь!");
         System.out.println("Напиши Полюшко-поле, что бы мы спели Полюшко-поле");
     }
@@ -35,7 +35,7 @@ public class Conductor extends Person {
         String sc = input.nextLine();
 
         if ("poi".equals(sc)){
-            System.out.println("Вы ввели некорректное число");
+            System.out.println("Пой");
         } else {
             System.out.println("не пой");
         }
