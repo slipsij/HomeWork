@@ -1,6 +1,6 @@
 package ru.snatkin.task9;
 
-public class Wolf extends Animal implements Barkable, Runable{
+public class Wolf extends Animal implements Barkable, Runable {
     @Override
     public void getName() {
         System.out.println("меня зовут Волк");
@@ -13,6 +13,7 @@ public class Wolf extends Animal implements Barkable, Runable{
 
     @Override
     public void run() {
-
+        System.out.println("бегу из метода run в классе волк");
+        }
     }
-}
+

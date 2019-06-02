@@ -8,6 +8,6 @@ public class Sheep extends Animal implements Runable{
 
     @Override
     public void run() {
-
+        System.out.println("Бегу из абстрактного класса Sheep");
     }
 }

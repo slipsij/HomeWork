@@ -16,6 +16,6 @@ public class Dog extends Animal implements Barkable, Runable {
 
     @Override
     public void run() {
-
+        System.out.println("метог Бег из класса собака");
     }
 }

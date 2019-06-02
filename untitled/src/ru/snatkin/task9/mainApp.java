@@ -9,5 +9,10 @@ public class mainApp {
 
         Wolf wolf = new Wolf();
         wolf.bark();
+
+
+        Person man = new Person();
+        man.run();
+        man.swim();
     }
 }
