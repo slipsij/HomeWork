@@ -9,21 +9,18 @@ public class Mom {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите еду: Жареная картошка, Манго, Хот-Дог");
 
-        Meal a = Meal.HotDog;
         String eat;
-        boolean b = false;    //тут не понятно что за конструкция
-        while (!b) {
-            try {
-                eat = scan.nextLine();
-                a = Meal.valueOf(eat);
-                b = true;
-            } catch (IllegalArgumentException e) {
-                System.out.println("Такой еды нет");
-            }
-        } try {
+        eat = scan.nextLine();
+        Meal a = Meal.getMealByTitle(eat);
+
+        try {
+        if (a != null) {
             someChild.toEat(a);
-        } catch (BadMEalException e) {
-            System.out.println("Попробуем другую пищу");
+        } else {
+            System.out.println("Пользователь ввел не корректные данные null");
         }
+       } catch (BadMEalException e) {
+        System.out.println("Попробуем другую пищу");
+    }
     }
 }
