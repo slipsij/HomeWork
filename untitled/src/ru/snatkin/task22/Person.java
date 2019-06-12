@@ -1,5 +1,5 @@
 package ru.snatkin.task22;
-
+/*
 public class Person implements Comparable<Person> {
     private String name;
     private int age;
@@ -53,3 +53,4 @@ public class Person implements Comparable<Person> {
     }
 }
 
+*/

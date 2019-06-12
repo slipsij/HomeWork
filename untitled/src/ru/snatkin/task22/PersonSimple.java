@@ -1,5 +1,5 @@
 package ru.snatkin.task22;
-
+/*
 
 public enum PersonSimple {
 
@@ -38,3 +38,4 @@ ANTON()
     }
 }
 
+*/

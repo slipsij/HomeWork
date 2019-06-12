@@ -1,7 +1,5 @@
-
-
 package ru.snatkin.task22;
-
+/*
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -65,3 +63,4 @@ public class App {
         System.out.println();
     }
 }
+*/

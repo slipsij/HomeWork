@@ -1,4 +1,5 @@
 package ru.snatkin.task22;
+/*
 
 import java.util.Comparator;
 
@@ -26,3 +27,4 @@ public class PersonComparator implements Comparator<PersonSimple> {
         return null;
     }
 }
+*/
