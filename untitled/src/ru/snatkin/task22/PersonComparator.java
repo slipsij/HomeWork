@@ -1,30 +1,30 @@
 package ru.snatkin.task22;
-/*
+
 
 import java.util.Comparator;
 
+public class PersonComparator implements Comparator<Person> {
 
-
-public class PersonComparator implements Comparator<PersonSimple> {
-
-    public int compareName(PersonSimple a, PersonSimple b) {
-
-        return b.getName().compareTo(a.getName());
+    public int compareName(Person a, Person b) {
+        return a.getName().compareTo(b.getName());
     }
 
-    public int compareAge(PersonSimple a, PersonSimple b) {
-
-        return b.getAge().compareTo(a.getAge());
-    }
-
-    @Override
-    public int compare(PersonSimple o1, PersonSimple o2) {
-        return 0;
+    public int compareAge(Person a, Person b) {
+        if (a.getAge() > b.getAge()){
+            return 1;
+        } else if (a.getAge() < b.getAge()) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 
     @Override
-    public Comparator<PersonSimple> reversed() {
-        return null;
+    public int compare(Person o1, Person o2) {
+        if (compareAge(o1, o2) == 0) {
+            return compareName(o1, o2);
+        } else {
+            return compareAge(o1, o2);
+        }
     }
 }
-*/

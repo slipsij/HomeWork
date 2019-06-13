@@ -8,10 +8,8 @@ public class Shop {
     public static void main(String[] args) {
         System.out.println("Welcome!");
         System.out.println("Select the desired action.");
-
         Menu startMenu = new Menu();
         while(startMenu.chooseAction() <= 2) {}
-
     }
 
     public static List<Product> getProducts() {
@@ -22,8 +20,6 @@ public class Shop {
         productList.add(new Product(ProductType.BREAD, "Wheat bread"));
         productList.add(new Product(ProductType.MILK, "Oat Milk"));
         productList.add(new Product(ProductType.VEGETABLES, "Tomato"));
-
         return productList;
     }
-
 }

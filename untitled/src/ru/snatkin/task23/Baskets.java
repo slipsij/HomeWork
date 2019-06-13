@@ -14,8 +14,7 @@ import java.util.List;
 
         List<String> getProducts();
 
-        int getProductQuantity(String product);
-
-    }
+        int getProductQuantity(String product); // добавить вызов
+}
 
 

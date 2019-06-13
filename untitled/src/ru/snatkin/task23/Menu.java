@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
-
 public class Menu {
     Shop products = new Shop();
     UserBaskets userBasket = new UserBaskets();
@@ -35,8 +33,6 @@ public class Menu {
         }
         return  choice;
     }
-
-
 
     private void workWithCart() {
         System.out.println("1. Remove product");
@@ -75,13 +71,10 @@ public class Menu {
         System.out.println();
     }
 
-
-
     private void workWithProducts() {
         showTypeProducts();
         int choice = showProducts();
         if(choice >= 0 && choice <= productType.length) chooseProductToAdd();
-
     }
 
     private void showTypeProducts() {
@@ -113,11 +106,9 @@ public class Menu {
                     k++;
                 }
             }
-        }
-        else {
+        } else {
             System.out.println("This type product is not available");
         }
-
         return choice;
     }
 
@@ -125,7 +116,6 @@ public class Menu {
         int choice = input();
         if(choice > indexProduct.size()) {
             System.out.println("This product is not available");
-
         }
         else {
             System.out.println("How many products do you need?");
@@ -133,8 +123,6 @@ public class Menu {
             userBasket.addProduct(productList.get(indexProduct.get(choice - 1)).getName(), quantity);
         }
     }
-
-
 
     private int input() {
         Scanner in = new Scanner(System.in);
@@ -150,7 +138,6 @@ public class Menu {
                 in.next();
             }
         }
-
         return choice;
     }
 }
