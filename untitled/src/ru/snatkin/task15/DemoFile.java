@@ -8,7 +8,8 @@ import java.nio.file.Paths;
 
 public class DemoFile {
 
-    public static void main(String[] args) throws IOException {
+    // TODO: 16.06.2019 psvm, убрада throws, некуда дальше пробросить, ошибку обрабатываем
+    public static void main(String[] args) {
 
         System.out.println(File.separator);
 
@@ -21,26 +22,39 @@ public class DemoFile {
 
         } catch (IOException e) {
             System.out.println("ошибка создания файла");
-
         }
-        System.out.println(file.getCanonicalPath());
-
+        // TODO: 16.06.2019 при вызове данной функции может возникнуть ошибка
+        // TODO: 16.06.2019 в psvm мы ее не пробрасываем выше (throws IOException), а обрабатываем
+        //System.out.println(file.getCanonicalPath());
+        try {
+            System.out.println(file.getCanonicalPath());
+        } catch (IOException e) {
+            System.out.println("При вызове метода getCanonicalPath возникла ошибка");
+        }
 
 
         File dir = new File ("dir/a/b/c");
         dir.mkdirs();
 
         File file1 = new File("dir/a/b/c/first.txt");
-        file1.createNewFile();
-        new File("dir/a/b/c/second.txt").createNewFile();
-        new File("dir/a/b/first.txt").createNewFile();
-        new File("dir/a/first.txt").createNewFile();
+        try {
+            file1.createNewFile();
+            new File("dir/a/b/c/second.txt").createNewFile();
+            new File("dir/a/b/first.txt").createNewFile();
+            new File("dir/a/first.txt").createNewFile();
+        } catch (IOException e) {
+            // TODO: 16.06.2019 в идеале, эту ошибку записать в файл логов (14 лекция)
+            e.printStackTrace();
+        }
+
         //files copy
         Path src = Paths.get("dir/a/first.txt");
         Path dst = Paths.get("dir/a/new.txt");
-        Files.copy(src, dst);
-
-
-
+        try {
+            Files.copy(src, dst);
+        } catch (IOException e) {
+            // TODO: 16.06.2019 в идеале, эту ошибку записать в файл логов (14 лекция)
+            e.printStackTrace();
+        }
     }
 }
