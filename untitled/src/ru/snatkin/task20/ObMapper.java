@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -11,6 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class ObMapper {
     public static void main(String[] args) {
         ObjectMapper mapper = new ObjectMapper();
+        mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         try { String str = "{\n" +
                 "  \"name\": \"http.cat\",\n" +
                 "  \"version\": \"2.0.0\",\n" +
