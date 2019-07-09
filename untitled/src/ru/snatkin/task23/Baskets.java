@@ -12,7 +12,7 @@ import java.util.List;
 
         void clear();
 
-        List<String> getProducts();
+        List<Product> getProducts();
 
         int getProductQuantity(String product); // добавить вызов
 }

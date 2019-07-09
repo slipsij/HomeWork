@@ -57,8 +57,8 @@ public class Menu {
         else System.out.println("Basket is empty!");
     }
 
-    private String getProductToRemove(int choice) {
-        return userBasket.getProducts().get((choice - 1) * 2);
+    private Product getProductToRemove(int choice) {
+        return userBasket.getProducts().get(choice);
     }
 
     private void showSelectedProducts() {
